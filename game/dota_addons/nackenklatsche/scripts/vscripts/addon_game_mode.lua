@@ -2,7 +2,20 @@
 _G.RespawnTime = 10
 _G.StartingLevel = 1
 _G.StartingGold = 500
-
+_G.ItemsToDrop = 
+	{
+		"item_urn_of_shadows",
+		"item_ring_of_basilius",
+		"item_ring_of_aquila",
+		"item_arcane_boots",
+		"item_tranquil_boots",
+		"item_phase_boots",
+		"item_power_treads",
+		"item_medallion_of_courage",
+		"item_soul_ring",
+		"item_gem",
+		"item_orb_of_venom"
+	}
 require('lib/timers')
 
 if NackenklatscheGameMode == nil then
@@ -63,7 +76,7 @@ function NackenklatscheGameMode:InitGameMode()
   
   ListenToGameEvent( "entity_killed", Dynamic_Wrap( NackenklatscheGameMode, 'OnEntityKilled' ), self )
   ListenToGameEvent("dota_player_pick_hero", SetPoints, nil)
-  
+  ListenToGameEvent( "dota_item_picked_up", Dynamic_Wrap( NackenklatscheGameMode, "OnItemPickUp"), self )
   
   CustomGameEventManager:RegisterListener( "set_respawn_time", Dynamic_Wrap(NackenklatscheGameMode, 'SetRespawnTime'))
   CustomGameEventManager:RegisterListener( "set_starting_gold", Dynamic_Wrap(NackenklatscheGameMode, 'SetStartingGold'))
@@ -96,12 +109,17 @@ function NackenklatscheGameMode:OnEntityKilled( event )
 
 	local attackinghero = EntIndexToHScript( event.entindex_attacker )
 	
-	if attackinghero:IsRealHero() then
-		NackenklatscheGameMode:OnHeroKill( attackinghero )
-	end
-	
-	if killedUnit:IsRealHero() then
-		NackenklatscheGameMode:OnHeroKilled( killedUnit )
+
+	if killedUnit:GetUnitName() == "npc_dota_roshan" then
+		NackenklatscheGameMode:TreasureDrop( killedUnit )
+	else
+		if attackinghero:IsRealHero() then
+			NackenklatscheGameMode:OnHeroKill( attackinghero )
+		end
+		
+		if killedUnit:IsRealHero() then
+			NackenklatscheGameMode:OnHeroKilled( killedUnit )
+		end
 	end
 end
 
@@ -138,4 +156,89 @@ end
 function NackenklatscheGameMode:SpawnCreeps()
     local point = Entities:FindByName( nil, "spawnerino"):GetAbsOrigin()
     local unit = CreateUnitByName("sheep", point, true, nil, nil, DOTA_TEAM_NEUTRALS)
+end
+
+
+--------------------------------------------------------------------------------
+-- Event: OnItemPickUp
+--------------------------------------------------------------------------------
+function NackenklatscheGameMode:OnItemPickUp( event )
+	local item = EntIndexToHScript( event.ItemEntityIndex )
+	local owner = EntIndexToHScript( event.HeroEntityIndex )
+	r = 300
+	--r = RandomInt(200, 400)
+	if event.itemname == "item_bag_of_gold" then
+		--print("Bag of gold picked up")
+		PlayerResource:ModifyGold( owner:GetPlayerID(), r, true, 0 )
+		SendOverheadEventMessage( owner, OVERHEAD_ALERT_GOLD, owner, r, nil )
+		UTIL_Remove( item ) -- otherwise it pollutes the player inventory
+	elseif event.itemname == "item_treasure_chest" then
+		--print("Special Item Picked Up")
+		NackenklatscheGameMode:SpecialItemAdd( event )
+		UTIL_Remove( item ) -- otherwise it pollutes the player inventory
+	end
+end
+
+
+
+function NackenklatscheGameMode:SpecialItemAdd( event )
+	local item = EntIndexToHScript( event.ItemEntityIndex )
+	local owner = EntIndexToHScript( event.HeroEntityIndex )
+	local hero = owner:GetClassname()
+	local ownerTeam = owner:GetTeamNumber()
+
+	local tableindex = 0
+
+	self.tier1ItemBucket={}
+	local itemToSpawn = PickRandomShuffle( _G.ItemsToDrop, self.tier1ItemBucket )
+
+
+	-- add the item to the inventory and broadcast
+	owner:AddItemByName( itemToSpawn )
+	EmitGlobalSound("powerup_04")
+	local overthrow_item_drop =
+	{
+		hero_id = hero,
+		dropped_item = itemToSpawn
+	}
+	CustomGameEventManager:Send_ServerToAllClients( "overthrow_item_drop", overthrow_item_drop )
+end
+
+
+function PickRandomShuffle( reference_list, bucket )
+    if ( #reference_list == 0 ) then
+        return nil
+    end
+    
+    if ( #bucket == 0 ) then
+        -- ran out of options, refill the bucket from the reference
+        for k, v in pairs(reference_list) do
+            bucket[k] = v
+        end
+    end
+
+    -- pick a value from the bucket and remove it
+    local pick_index = RandomInt( 1, #bucket )
+    local result = bucket[ pick_index ]
+    table.remove( bucket, pick_index )
+    return result
+end
+
+
+
+function NackenklatscheGameMode:TreasureDrop( treasureCourier )
+
+	--Create the death effect for the courier
+	local spawnPoint = treasureCourier:GetAbsOrigin()
+	spawnPoint.z = 400
+
+	EmitGlobalSound( "lockjaw_Courier.Impact" )
+	EmitGlobalSound( "lockjaw_Courier.gold_big" )
+
+	--Spawn the treasure chest at the selected item spawn location
+	local newItem = CreateItem( "item_treasure_chest", nil, nil )
+	local drop = CreateItemOnPositionForLaunch( spawnPoint, newItem )
+	drop:SetForwardVector( treasureCourier:GetRightVector() ) -- oriented differently
+	newItem:LaunchLootInitialHeight( false, 0, 50, 0.25, spawnPoint )
+
 end

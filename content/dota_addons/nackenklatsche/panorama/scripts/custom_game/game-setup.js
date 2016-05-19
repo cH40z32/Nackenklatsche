@@ -13,6 +13,10 @@ function CheckForHostPrivileges()
 	}
 		
 	$.GetContextPanel().SetHasClass( "player_has_host_privileges", playerInfo.player_has_host_privileges );
+	$.GetContextPanel().SetHasClass( "animation_started", true );
+	
+	
+	
 	return playerInfo.player_has_host_privileges;
 
 }
