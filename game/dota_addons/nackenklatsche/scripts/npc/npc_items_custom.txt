@@ -1160,7 +1160,7 @@
 	//=================================================================================================================
 	// Recipe: Shiva's Guard
 	//=================================================================================================================
-	"item_recipe_shivas_guard"
+	"item_recipe_shivas_guard2"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
@@ -1185,7 +1185,7 @@
 	//=================================================================================================================
 	// Shiva's
 	//=================================================================================================================
-	"item_shivas_guard"
+	"item_shivas_guard2"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
@@ -1204,7 +1204,7 @@
 		"ItemCost"						"9400"
 		"ItemShopTags"					"int;armor;hard_to_tag"
 		"ItemQuality"					"epic"
-		"ItemAliases"					"Lderjacke"
+		"ItemAliases"					"Lederjacke"
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		
@@ -1321,7 +1321,7 @@
 		"ItemCost"						"4400"
 		"ItemShopTags"					"damage;armor;int;hard_to_tag"
 		"ItemQuality"					"epic"
-		"ItemAliases"					"blade mail"
+		"ItemAliases"					"blade mail2"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		
 		// Special	
