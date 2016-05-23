@@ -1157,6 +1157,284 @@
 	
 	
 	
+	//=================================================================================================================
+	// Recipe: Shiva's Guard
+	//=================================================================================================================
+	"item_recipe_shivas_guard"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1526"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"    					"item_datadriven"
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_shivas_guard2"
+		"ItemRequirements"
+		{
+			"01"						"item_shivas_guard;item_shivas_guard;item_gas_wumme"
+		}
+	}
+	
+	//=================================================================================================================
+	// Shiva's
+	//=================================================================================================================
+	"item_shivas_guard"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1527"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"FightRecapLevel"				"1"
+		"BaseClass"    					"item_shivas_guard"
+		"AbilityTextureName" 			"item_shivas_guard2"
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+		"ItemCost"						"9400"
+		"ItemShopTags"					"int;armor;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"Lderjacke"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"		"60"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"1800"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_attack_speed"		"-90"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blast_damage"			"400"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blast_movement_speed"	"-80"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"blast_debuff_duration"	"8.0"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blast_radius"			"1800"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blast_speed"			"700"
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//=================================================================================================================
+	// Recipe: Blade Mail2
+	//=================================================================================================================
+	"item_recipe_blade_mail2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1528"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"FightRecapLevel"				"1"
+		"BaseClass"    					"item_datadriven"
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_blade_mail2"
+		"ItemRequirements"
+		{
+			"01"						"item_blade_mail;item_blade_mail;item_baseballer"
+		}
+	}
+	
+	//=================================================================================================================
+	// Blade Mail
+	//=================================================================================================================
+	"item_blade_mail2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1529"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass"    					"item_blade_mail"
+		"AbilityTextureName" 			"item_blade_mail2"
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"18.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"25"
+		"ItemCost"						"4400"
+		"ItemShopTags"					"damage;armor;int;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"blade mail"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"50"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"12"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"		"20"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"9.0"
+			}
+		}
+	}
+	
+	
+	
+	
+	//=================================================================================================================
+	// Recipe: Mask of Madness
+	//=================================================================================================================
+	"item_recipe_mask_of_madness2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1530"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"    					"item_datadriven"
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_mask_of_madness2"
+		"ItemRequirements"
+		{
+			"01"						"item_mask_of_madness;item_mask_of_madness;item_messer"
+		}
+	}
+	
+	//=================================================================================================================
+	// Mask of Madness
+	//=================================================================================================================
+	"item_mask_of_madness2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1531"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"FightRecapLevel"				"1"
+		"BaseClass"    					"item_mask_of_madness"
+		"AbilityTextureName" 			"item_mask_of_madness2"
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"25"
+		"ItemCost"						"1800"
+		"ItemShopTags"					"unique;hard_to_tag"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"mom;mask of madness"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lifesteal_percent"		"40"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"berserk_bonus_attack_speed"	"100"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"berserk_bonus_movement_speed"	"34"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"berserk_extra_damage"	"50"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"berserk_duration"		"24.0"
+			}
+		}
+	}
 	
 	
 }
