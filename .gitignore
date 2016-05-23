@@ -75,3 +75,8 @@ steam_appid.txt
 *.vpk
 *.vtex_c
 *.vmat
+/config/
+/dota/
+*.mdmp
+/platform/
+installscript.vdf
