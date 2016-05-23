@@ -208,7 +208,7 @@
  		"item"		"item_sange_and_yasha"
  		"item"		"item_skadi" 
  		"item"		"item_mjollnir"
- 		"item"		"item_satanic"		
+ 		"item"		"item_satanic2"		
 // 		"item"		"item_jade_bow"		
 	}
 
