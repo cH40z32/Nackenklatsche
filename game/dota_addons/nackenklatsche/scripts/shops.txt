@@ -158,7 +158,7 @@
 		"item"		"item_crimson_guard"		
 		"item"		"item_black_king_bar"
 		"item"		"item_lotus_orb"		
-		"item"		"item_shivas_guard"
+		"item"		"item_shivas_guard2"
 		"item"		"item_bloodstone"
 		"item"		"item_manta"
 		"item"		"item_sphere"
@@ -195,7 +195,7 @@
 	"artifacts"
 	{	
  		//"item"		"item_venomous_shield"
- 		"item"		"item_mask_of_madness"
+ 		"item"		"item_mask_of_madness2"
  		"item"		"item_helm_of_the_dominator"
  		"item"		"item_dragon_lance"
 		"item"		"item_sange"
