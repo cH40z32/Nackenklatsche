@@ -43,7 +43,7 @@
 		"ItemResult"					"item_butterfly2"
 		"ItemRequirements"
 		{
-			"01"						"item_butterfly;item_butterfly;item_butterfly"
+			"01"						"item_butterfly;item_butterfly;item_messer"
 		}
 	}
 	
@@ -88,7 +88,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_evasion"			"70"
+				"bonus_evasion"			"45"
 			}
 			"04"
 			{
@@ -103,7 +103,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"8"
+				"duration"				"16"
 			}
 		}
 	}
@@ -133,7 +133,7 @@
 		"ItemResult"					"item_heart2"
 		"ItemRequirements"
 		{
-			"01"						"item_heart;item_heart;item_heart"
+			"01"						"item_heart;item_heart;item_baseballer"
 		}
 	}
 	
@@ -177,7 +177,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"health_regen_rate"		"10"
+				"health_regen_rate"		"5"
 			}
 			"04"
 			{
@@ -212,7 +212,7 @@
 		"ItemResult"					"item_bfury2"
 		"ItemRequirements"
 		{
-			"01"						"item_bfury;item_bfury;item_bfury;"
+			"01"						"item_bfury;item_bfury;item_baseballer;"
 		}
 	}	
 	
@@ -264,7 +264,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cleave_damage_percent"	"70"
+				"cleave_damage_percent"	"50"
 			}
 			"05"
 			{
@@ -328,7 +328,7 @@
 		"ItemResult"					"item_monkey_king_bar2"
 		"ItemRequirements"
 		{
-			"01"						"item_monkey_king_bar;item_monkey_king_bar;item_monkey_king_bar"
+			"01"						"item_monkey_king_bar;item_monkey_king_bar;item_messer"
 		}
 	}
 	
@@ -368,7 +368,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bash_chance"			"70"
+				"bash_chance"			"45"
 			}
 			"04"
 			{
@@ -412,7 +412,7 @@
 		"ItemResult"					"item_desolator2"
 		"ItemRequirements"
 		{
-			"01"						"item_desolator;item_desolator;item_desolator"
+			"01"						"item_desolator;item_desolator;item_baseballer"
 		}
 	}
 	
@@ -442,7 +442,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"100"
+				"bonus_damage"			"122"
 			}
 			"02"
 			{
@@ -483,7 +483,7 @@
 		"ItemResult"					"item_orchid2"
 		"ItemRequirements"
 		{
-			"01"						"item_orchid;item_orchid;item_orchid"
+			"01"						"item_orchid;item_orchid;item_gas_wumme"
 		}
 	}
 	
@@ -525,7 +525,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_intellect"		"50"
+				"bonus_intellect"		"150"
 			}
 			"02"
 			{
@@ -535,7 +535,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"60"
+				"bonus_damage"			"100"
 			}
 			"04"
 			{
@@ -586,7 +586,7 @@
 		"ItemResult"					"item_rapier2"
 		"ItemRequirements"
 		{
-			"01"						"item_rapier;item_rapier;item_rapier"
+			"01"						"item_rapier;item_rapier;item_messer"
 		}
 	}
 	
@@ -598,7 +598,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"1514"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"BaseClass"    "item_rapier"
+		"BaseClass"    					"item_rapier"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"Model"							"models/props_gameplay/divine_rapier.vmdl"
 		"AbilityTextureName" 			"item_rapier2"
@@ -635,7 +635,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"257"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"							"1515"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 		"FightRecapLevel"				"1"
 																																																																												 
@@ -675,148 +675,6 @@
 	}
 	
 	
-	
-	//=================================================================================================================
-	// Infused Raindrop
-	//=================================================================================================================
-	"item_infused_raindrop"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"265"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"	
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.0"
-		"AbilityCooldown"				"4.0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"					"225"
-		"ItemShopTags"					"armor"
-		"ItemQuality"					"component"
-		"ItemAliases"					"raindrop"
-		"SideShop"					"0"
-		"ItemStackable"					"0"
-		"ItemPermanent"					"0"
-		"ItemInitialCharges"				"5"
-		"SideShop"					"0"
-		"ItemHideCharges"				"0"
-		"ItemStockTime"					"1"			  
-		"ItemStockInitial"				"0"
-		"ItemStockMax"					"1"
-		"ItemInitialStockTime"			"270.0"
-		
-		// Sounden
-		//-------------------------------------------------------------------------------------------------------------			
-		"UIPickupSound"					"Item.PickUpRingShop"
-		"UIDropSound"					"Item.DropRingShop"
-		"WorldDropSound"				"Item.DropRingWorld"
-
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"mana_regen"			"0.85"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"bonus_armor"			"0"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_magical_armor"	"0"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"magic_damage_block"	"120"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"min_damage"			"50"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"initial_charges"		"5"
-			}
-		}
-	}
-
-	//=================================================================================================================
-	// Banana
-	//=================================================================================================================
-	"item_banana"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"264"								// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		//"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"Model"							"models/props_gameplay/banana_prop_closed.vmdl"
-		
-// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0"
-		//"AbilityCastRange"				"800"
-		"AbilityCooldown"				"0.0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"0"
-		"ItemShopTags"					"armor"
-		"ItemQuality"					"component"
-		"ItemAliases"					"banana"
-		"SideShop"						"0"
-		"ItemStackable"					"1"
-		"ItemPurchasable"				"0"
-		"ItemPermanent"					"0"
-		"ItemInitialCharges"			"1"
-		"ItemDisplayCharges"			"1"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		
-		// Sounden
-		//-------------------------------------------------------------------------------------------------------------			
-		"UIPickupSound"					"Item.PickUpRingShop"
-		"UIDropSound"					"Item.DropRingShop"
-		"WorldDropSound"				"Item.DropRingWorld"
-
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"slide_distance"		"400"
-			}
-			"02"
-			{
-				"var_type"			"FIELD_FLOAT"
-				"slide_duration"		"1.0"
-			}
-			"03"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"radius"			"100"
-			}
-		}
-	}
-
-
-
-
-
-
-
-
 
 
 
@@ -828,7 +686,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"1001"
+		"ID"							"1518"
 		"AbilityName"					"item_treasure_chest"
 		"BaseClass"						"item_bag_of_gold"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_ITEM"
@@ -871,7 +729,7 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 		"Model"							"models/props_gameplay/gold_coin001.vmdl"
 		"ItemKillable"					"0"
-		
+
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"100"
@@ -889,5 +747,315 @@
 		"ItemInitialCharges"			"0"
 		"ItemKillable"					"0"
 		"ItemCastOnPickup"				"1"
+	}
+
+
+
+
+
+
+
+	//=================================================================================================================
+	// Gas Wumme
+	//=================================================================================================================
+	"item_gas_wumme"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1519"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+			"BaseClass"    					"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"AbilityTextureName" 				"gas_wumme"
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"10000"
+		"ItemShopTags"					"damage"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"Gas Wumme"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemSellable"					"1"
+		"ItemPurchasable" 				"1"
+		"ItemKillable"					"0"
+		"ItemDroppable" 				"1"
+		"ItemAlertable"   				"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS | DECLARE_PURCHASES_IN_SPEECH"
+		"ItemContributesToNetWorthWhenDropped"	"0"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"50"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"		"150"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_gas_wumme"
+			{
+				"Passive"  "1"
+				"IsHidden" "1" 
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_intellect"
+				}
+			} 
+		}
+	}
+	
+		//=================================================================================================================
+	// Gas Wumme
+	//=================================================================================================================
+	"item_messer"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1520"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"    					"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"AbilityTextureName" 				"messer"
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"10000"
+		"ItemShopTags"					"damage"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"Butterfly Messer"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemSellable"					"1"
+		"ItemPurchasable" 				"1"
+		"ItemKillable"					"0"
+		"ItemDroppable" 				"1"
+		"ItemAlertable"   				"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS | DECLARE_PURCHASES_IN_SPEECH"
+		"ItemContributesToNetWorthWhenDropped"	"0"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"50"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"150"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_messer"
+			{
+				"Passive"  "1"
+				"IsHidden" "1" 
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%bonus_agility"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+				}
+			} 
+		}
+	}
+	
+	
+			//=================================================================================================================
+	// Baseballer
+	//=================================================================================================================
+	"item_baseballer"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1521"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"    					"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"AbilityTextureName" 				"baseballer"
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"10000"
+		"ItemShopTags"					"damage"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"Baseball Schläger"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemSellable"					"1"
+		"ItemPurchasable" 				"1"
+		"ItemKillable"					"0"
+		"ItemDroppable" 				"1"
+		"ItemAlertable"   				"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS | DECLARE_PURCHASES_IN_SPEECH"
+		"ItemContributesToNetWorthWhenDropped"	"0"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"50"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"150"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_baseballer"
+			{
+				"Passive"  "1"
+				"IsHidden" "1" 
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+				
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_strength"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+
+				}
+			} 
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//=================================================================================================================
+	// Recipe: Phase Boots2
+	//=================================================================================================================
+	"item_recipe_phase_boots2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1522"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"    					"item_datadriven"
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_phase_boots2"
+		"ItemRequirements"
+		{
+			"01"						"item_phase_boots;item_messer"
+		}
+	}
+	
+	//=================================================================================================================
+	// Phase Boots
+	//=================================================================================================================
+	"item_phase_boots2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1523"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"BaseClass"    					"item_phase_boots"
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"8.0"
+		"AbilityTextureName" 				"item_phase_boots2"
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1240"
+		"ItemShopTags"					"damage;move_speed;hard_to_tag"
+		"ItemQuality"					"common"
+		"ItemAliases"					"phase boots"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement_speed"	"100"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"24"
+			}			
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_block_melee"	"0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_block_ranged"	"0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"block_chance"			"0"
+			}		
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"phase_movement_speed"  "250"
+			}		
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"phase_movement_speed_range"  "40"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"phase_duration"		"5.0"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"0"
+			}		
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"0"
+			}		
+		}
 	}
 }
