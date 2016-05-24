@@ -1,4 +1,4 @@
-"DOTAAbilities"
+﻿"DOTAAbilities"
 {
 	"Version"		"1"
 
@@ -1067,8 +1067,8 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"1524"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.vmdl"
+		"ID"						"1524"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"						"models/props_gameplay/recipe.vmdl"
 		"BaseClass"    					"item_datadriven"
 		
 		// Item Info
@@ -1082,7 +1082,7 @@
 		"ItemResult"					"item_satanic2"
 		"ItemRequirements"
 		{
-			"01"						"item_satanic2;item_satanic2;item_baseballer"
+			"01"					"item_satanic;item_satanic;item_baseballer"
 		}
 	}
 	
@@ -1093,7 +1093,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"1525"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"						"1525"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"FightRecapLevel"				"2"
 		"BaseClass"    					"item_satanic"
@@ -1105,10 +1105,10 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"11800"
+		"ItemCost"					"11800"
 		"ItemShopTags"					"damage;str;armor;unique;hard_to_tag"
 		"ItemQuality"					"artifact"
-		"ItemAliases"					"satanic"
+		"ItemAliases"					"satanic2"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		
 		// Special	
@@ -1166,7 +1166,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"1526"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"Model"							"models/props_gameplay/recipe.vmdl"
-		"BaseClass"    					"item_datadriven"
+		"BaseClass"    						"item_datadriven"
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"0"	
@@ -1174,8 +1174,8 @@
 		
 		// Recipe
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemRecipe"					"1"
-		"ItemResult"					"item_shivas_guard2"
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_shivas_guard2"
 		"ItemRequirements"
 		{
 			"01"						"item_shivas_guard;item_shivas_guard;item_gas_wumme"
@@ -1189,11 +1189,11 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"1527"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"						"1527"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 		"FightRecapLevel"				"1"
 		"BaseClass"    					"item_shivas_guard"
-		"AbilityTextureName" 			"item_shivas_guard2"
+		"AbilityTextureName" 				"item_shivas_guard2"
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"30"
@@ -1204,7 +1204,7 @@
 		"ItemCost"						"9400"
 		"ItemShopTags"					"int;armor;hard_to_tag"
 		"ItemQuality"					"epic"
-		"ItemAliases"					"Lederjacke"
+		"ItemAliases"					"shivas guard 2"
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		
@@ -1296,7 +1296,7 @@
 		"ItemResult"					"item_blade_mail2"
 		"ItemRequirements"
 		{
-			"01"						"item_blade_mail;item_blade_mail;item_baseballer"
+			"01"						"item_blade_mail;item_blade_mail;item_gas_wumme"
 		}
 	}
 	
@@ -1375,7 +1375,7 @@
 		"ItemResult"					"item_mask_of_madness2"
 		"ItemRequirements"
 		{
-			"01"						"item_mask_of_madness;item_mask_of_madness;item_messer"
+			"01"					"item_mask_of_madness;item_mask_of_madness;item_gas_wumme"
 		}
 	}
 	
@@ -1390,7 +1390,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 		"FightRecapLevel"				"1"
 		"BaseClass"    					"item_mask_of_madness"
-		"AbilityTextureName" 			"item_mask_of_madness2"
+		"AbilityTextureName" 				"item_mask_of_madness2"
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"15.0"
